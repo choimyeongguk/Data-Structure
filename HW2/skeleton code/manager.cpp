@@ -12,7 +12,7 @@ Manager::~Manager() {
 
 void Manager::add_device(Device* device) {
 	if(device_count == MAX_DEVICES) {
-		std::cout << "더 이상 Device를 추가할 수 없습니다.\n";
+		std::cout << "Cannot add more devices.\n";
 		delete device;
 		return;
 	}
@@ -23,6 +23,10 @@ void Manager::add_device(Device* device) {
 }
 
 bool Manager::compare_device(int index, const Device& other) const {
+	if(!(0 <= index && index < device_count)) {
+		std::cout << "Invalid index.\n";
+		return false;
+	}
 	return *devices[index] == other;
 }
 

@@ -41,6 +41,13 @@ int main() {
     } else {
         std::cout << "Device at index 1 does not match the specified device." << std::endl;
     }
+    
+    if (deviceManager.compare_device(100, Phone(2, "Samsung", 128))) {
+        std::cout << "Device at index 1 matches the specified device." << std::endl;
+    } else {
+        std::cout << "Device at index 1 does not match the specified device." << std::endl;
+    }
+    
 
     // Find a device
     Device* foundDevice = deviceManager.find_device(Phone(2, "Samsung", 128));

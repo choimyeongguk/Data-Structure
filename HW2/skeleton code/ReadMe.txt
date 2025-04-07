@@ -19,6 +19,8 @@ Although no specific instructions were given for handling the case where no obje
 
 Although no specific instructions were given for handling the case where main.cpp allocate more than 100 Device objects, support for this case was implemented.
 
+Although no specific instructions were given for handling the case where comparing device with wrong index, support for this case was implemented.
+
 As the opposite state of the Ring's "Enabled" was not specified, I assumed it to be "Disabled".  
 Similarly, for the Earbud's "Yes" state, I assumed the opposite to be "No".
 
@@ -41,6 +43,8 @@ cmd 창에 ".\main.exe" 입력 시 프로그램이 정상적으로 작동함을 
 Manager 객체의 desturctor에서 동적 할당된 객체들을 해제해주는 것 이외에 destructor에서 해야하는 일에 대한 지시가 없어, 따로 다른 기능들은 추가하지 않았습니다.
 
 100개 초과의 device 객체를 할당하는 경우에 대한 예외 조항이 없으나, 구현하였습니다.
+
+비교하고자 하는 인덱스가 잘못되었을 경우에 대한 예외 조항이 없으나, 구현하였습니다.
 
 지우고자 하는 객체와 동일한 조건의 객체가 없는 경우에 대한 예외 조항이 없으나, 구현하였습니다.
 
