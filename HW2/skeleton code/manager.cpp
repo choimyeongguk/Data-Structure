@@ -8,6 +8,7 @@ Manager::Manager(): device_count(0) {}
 Manager::~Manager() {
 	for(int i = 0; i < device_count; i++)
 		delete devices[i];
+	device_count = 0;
 }
 
 void Manager::add_device(Device* device) {
